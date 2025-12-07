@@ -129,3 +129,5 @@ Thay bằng key của bạn.
 Lưu lại → chatbot hoạt động ngay lập tức.
 
 Website được xây dựng như một dự án học thuật kết hợp AI – lập trình – thiết kế UI/UX, hướng tới mô hình ứng dụng thực tiễn tại Trường Hermann Gmeiner Đà Nẵng.
+
+© 2025 — Developed by Sỹ Phú
