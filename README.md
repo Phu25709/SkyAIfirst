@@ -36,45 +36,48 @@ Xây dựng trọn bộ mã nguồn cho website đa trang (multi-page) giới th
 
 ---
 
-### 💡 Prompt thực tế đã sử dụng**
+### 💡 Prompt thực tế đã sử dụng
 
-Hãy tưởng tượng bạn là lập trình viên UI/UX chuyên nghiệp.
+Hãy tưởng tượng bạn là lập trình viên UI/UX chuyên nghiệp.  
 Nhiệm vụ: Xây dựng một website đa trang (multi-page) giới thiệu Trường Hermann Gmeiner Đà Nẵng, có dark mode/light mode và có nút toggle chuyển chế độ.
 
-YÊU CẦU CHUNG:
+#### YÊU CẦU CHUNG
 
-– Xuất đủ các file: index.html, gioithieu.html, hoctap.html, tintuc.html, thuvien.html, lienhe.html, styles.css, script.js.
-– HTML5 semantic, CSS modern, JavaScript nhẹ.
-– Giao diện tông cam – vàng – cream, điểm nhấn xanh SOS.
-– Website FULLY RESPONSIVE cho mọi kích thước màn hình.
-– Menu mobile dạng toggle (JS).
-– Tự co giãn hình ảnh, card, text, không vỡ layout.
-– Tối ưu mobile bằng media queries.
+- Xuất đủ các file: `index.html`, `gioithieu.html`, `hoctap.html`, `tintuc.html`, `thuvien.html`, `lienhe.html`, `styles.css`, `script.js`.  
+- HTML5 semantic, CSS hiện đại, JavaScript nhẹ.  
+- Giao diện tông cam – vàng – cream, điểm nhấn xanh SOS.  
+- Website **FULLY RESPONSIVE** cho mọi kích thước màn hình.  
+- Menu mobile dạng toggle (JS).  
+- Hình ảnh, card, text tự co giãn hợp lý, không vỡ layout.  
+- Tối ưu mobile bằng media queries.
 
-HEADER (TẤT CẢ TRANG):
-– Logo + menu: Trang chủ, Giới thiệu, Học tập, Tin tức, Thư viện, Liên hệ.
-– Mobile: ẩn menu ngang, dùng icon toggle.
+#### HEADER (TẤT CẢ TRANG)
 
-FOOTER (TẤT CẢ TRANG):
-– Thông tin trường, địa chỉ, email, hotline.
-– Link Fanpage, Website SOS Việt Nam.
-– Nhúng Google Maps (full width, responsive).
+- Logo + menu: Trang chủ, Giới thiệu, Học tập, Tin tức, Thư viện, Liên hệ.  
+- Trên mobile: ẩn menu ngang, dùng icon toggle (mở dạng danh sách dọc).
 
-NỘI DUNG TRANG:
-– index.html: Hero + 3 mục nổi bật.
-– gioithieu.html: Lịch sử, Sứ mệnh, Giá trị cốt lõi.
-– hoctap.html: Chương trình học, CLB, Môi trường.
-– tintuc.html: Card bài viết.
-– thuvien.html: Gallery responsive.
-– lienhe.html: Form liên hệ + thông tin.
+#### FOOTER (TẤT CẢ TRANG)
 
-KỸ THUẬT:
-– CSS: variables, flexbox, grid, media queries.
-– JS: toggle menu, smooth scroll.
+- Thông tin trường: địa chỉ, email, hotline.  
+- Link Fanpage và Website SOS Việt Nam.  
+- Nhúng Google Maps bằng `iframe` (full width, responsive).
 
-OUTPUT: Xuất code theo đúng thứ tự, từng file đầy đủ nội dung.
+#### NỘI DUNG TRANG
 
----
+- `index.html`: Hero section + 3 mục nổi bật.  
+- `gioithieu.html`: Lịch sử, Sứ mệnh, Giá trị cốt lõi.  
+- `hoctap.html`: Chương trình học, CLB, Môi trường.  
+- `tintuc.html`: Danh sách bài viết dạng card.  
+- `thuvien.html`: Responsive image gallery.  
+- `lienhe.html`: Thông tin liên hệ + form.
+
+#### KỸ THUẬT
+
+- CSS: CSS variables, Flexbox, Grid, Media queries.  
+- JS: Toggle menu, smooth scroll.
+
+**OUTPUT:** Xuất code theo đúng thứ tự, từng file đầy đủ nội dung.
+
 
 ## 🛠 Công nghệ sử dụng
 
