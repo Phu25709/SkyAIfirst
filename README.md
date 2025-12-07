@@ -121,6 +121,7 @@ Tính năng **“Trợ lý ảo Hermann AI”** cần API Key riêng của bạn
 ```javascript
 const apiKey = "DÁN_MÃ_API_KEY_CỦA_BẠN_VÀO_ĐÂY";
 Thay bằng key của bạn.
+```
 
 Lưu lại → chatbot hoạt động ngay lập tức.
 © 2025 — Developed by Sỹ Phú
