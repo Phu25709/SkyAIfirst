@@ -36,7 +36,7 @@ Xây dựng trọn bộ mã nguồn cho website đa trang (multi-page) giới th
 
 ---
 
-### 💡 Prompt thực tế đã sử dụng
+### 💡 Prompt thực tế đã sử dụng**
 
 Hãy tưởng tượng bạn là lập trình viên UI/UX chuyên nghiệp.
 Nhiệm vụ: Xây dựng một website đa trang (multi-page) giới thiệu Trường Hermann Gmeiner Đà Nẵng, có dark mode/light mode và có nút toggle chuyển chế độ.
