@@ -1,6 +1,8 @@
 Báo Cáo Dự Án Website Trường Hermann Gmeiner Đà Nẵng 🏫
 
-Đây là tài liệu tổng hợp quá trình xây dựng website, bao gồm cấu trúc Prompt đã sử dụng để tạo ra sản phẩm và hướng dẫn kỹ thuật.Thực hiện bởi Team Sky AI - Hermann Gmeiner Đà Nẵng
+Đây là tài liệu tổng hợp quá trình xây dựng website, bao gồm cấu trúc Prompt đã sử dụng để tạo ra sản phẩm và hướng dẫn kỹ thuật.
+
+Thực hiện bởi Team Sky AI - Hermann Gmeiner Đà Nẵng
 
 🔗 Link Demo Sản Phẩm (Kết quả)
 
@@ -123,6 +125,7 @@ Markdown Parsing: Thư viện marked.js để hiển thị câu trả lời củ
 └── README.md       # Tài liệu báo cáo này
 
 
+
 ⚠️ Lưu ý quan trọng về Chatbot AI (API Key)
 
 Để tính năng "Trợ lý ảo Hermann AI" hoạt động được, bạn cần tự cấu hình API Key của riêng mình (do vấn đề bảo mật, key không được public sẵn).
@@ -136,6 +139,7 @@ Mở file script.js.
 Tìm dòng đầu tiên và dán key của bạn vào:
 
 const apiKey = "DÁN_MÃ_API_KEY_CỦA_BẠN_VÀO_ĐÂY";
+
 
 
 Lưu lại và Chatbot sẽ hoạt động ngay lập tức! =))))
