@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Trường Hermann Gmeiner Đà Nẵng</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="shadow-md sticky top-0 z-50 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="navigateTo('index')">
+                    <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">H</div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-orange-700 leading-none font-special" style="color: var(--color-primary);">Hermann Gmeiner</h1>
+                        <span class="text-xs text-gray-500 tracking-wider">ĐÀ NẴNG</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <nav class="flex space-x-6">
+                        <a href="index.html" class="nav-link px-2 py-2 text-md font-medium" data-target="index">Trang chủ</a>
+                        <a href="gioithieu.html" class="nav-link active px-2 py-2 text-md font-medium" data-target="gioithieu">Giới thiệu</a>
+                        <a href="hoctap.html" class="nav-link px-2 py-2 text-md font-medium" data-target="hoctap">Học tập</a>
+                        <a href="tintuc.html" class="nav-link px-2 py-2 text-md font-medium" data-target="tintuc">Tin tức</a>
+                        <a href="thuvien.html" class="nav-link px-2 py-2 text-md font-medium" data-target="thuvien">Thư viện</a>
+                        <a href="lienhe.html" class="nav-link px-2 py-2 text-md font-medium" data-target="lienhe">Liên hệ</a>
+                    </nav>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button type="button" id="theme-toggle-desktop" class="theme-toggle-btn" onclick="toggleDarkMode()" title="Chuyển chế độ Sáng/Tối">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button type="button" id="theme-toggle-mobile" class="theme-toggle-btn w-8 h-8 text-sm" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button type="button" id="mobile-menu-btn" class="text-gray-700 hover:text-orange-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-2xl" style="color: var(--text-muted)"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden border-t border-gray-100 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Trang chủ</a>
+                <a href="gioithieu.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Giới thiệu</a>
+                <a href="hoctap.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Học tập</a>
+                <a href="tintuc.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Tin tức</a>
+                <a href="thuvien.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Thư viện</a>
+                <a href="lienhe.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Liên hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        <!-- GIOITHIEU -->
+        <section id="gioithieu">
+            <div class="bg-orange-50 py-12 transition-colors duration-300">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold">Về Trường Hermann Gmeiner</h2>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto mt-4"></div>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 py-12">
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+                    <div class="md:w-1/2">
+                        <img src="images/gioithieu-hero.jpg" alt="Hermann Gmeiner" class="rounded-lg w-full h-96 object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-primary);">Lịch Sử Thành Lập</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">Thời gian thành lập: Trường bắt đầu hoạt động vào năm học 1996 – 1997.
+
+Nguồn gốc: Được xây dựng dựa trên hiệp định giữa Chính phủ Việt Nam và tổ chức SOS Làng Trẻ em Quốc tế. Tên trường được lấy theo tên người sáng lập tổ chức này là ông Hermann Gmeiner.
+
+Mục đích đặc biệt: Giáo dục cho trẻ em mồ côi tại Làng SOS Đà Nẵng cùng với trẻ em tại cộng đồng dân cư xung quanh, giúp các em hòa nhập xã hội.
+
+Hiện tại: Là trường phổ thông liên cấp (Tiểu học, THCS, THPT) đạt chuẩn Quốc gia, nằm tại Phường Ngũ Hành Sơn.</p>
+                    </div>
+                </div>
+                
+                <!-- Hàng 1: Sứ mệnh & Tầm nhìn -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white p-8 rounded-xl shadow border-l-4 border-orange-500">
+                        <h3 class="text-xl font-bold mb-3 flex items-center"><i class="fas fa-bullseye mr-3 text-orange-500"></i> Sứ Mệnh</h3>
+                        <p class="text-gray-600">Kiến tạo môi trường giáo dục nhân văn.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold mb-3 flex items-center"><i class="fas fa-eye mr-3 text-blue-500"></i> Tầm Nhìn</h3>
+                        <p class="text-gray-600">Ngôi trường kiểu mẫu về giáo dục hòa nhập.</p>
+                    </div>
+                </div>
+
+                <!-- Hàng 2: Thêm 3 ô giới thiệu mới -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow border-t-4 border-green-500 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold mb-3 flex items-center text-gray-800">
+                            <i class="fas fa-chalkboard-teacher mr-3 text-green-500"></i> Đội Ngũ Giáo Viên
+                        </h3>
+                        <p class="text-gray-600">Tâm huyết, giàu kinh nghiệm và luôn đổi mới phương pháp giảng dạy.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow border-t-4 border-red-500 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold mb-3 flex items-center text-gray-800">
+                            <i class="fas fa-laptop-code mr-3 text-red-500"></i> Cơ Sở Vật Chất
+                        </h3>
+                        <p class="text-gray-600">Phòng học hiện đại, phòng máy tính, thí nghiệm và thư viện đạt chuẩn.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow border-t-4 border-purple-500 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold mb-3 flex items-center text-gray-800">
+                            <i class="fas fa-hand-holding-heart mr-3 text-purple-500"></i> Giáo Dục Nhân Cách
+                        </h3>
+                        <p class="text-gray-600">Chú trọng rèn luyện đạo đức, kỹ năng sống và tinh thần trách nhiệm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 transition-colors duration-300" style="background-color: #1f2937; border-top: 1px solid var(--border-color);">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cột 1 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Thông tin về Trường</h3>
+                    <p class="mb-4 text-sm leading-relaxed" style="color: #d1d5db;">
+                        Trường Hermann Gmeiner Đà Nẵng là một phần của tổ chức SOS Việt Nam, mang đến cơ hội giáo dục và phát triển toàn diện cho trẻ em.
+                    </p>
+                </div>
+                <!-- Cột 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Liên hệ</h3>
+                    <ul class="space-y-3 text-sm" style="color: white;">
+                        <li class="flex items-start">
+                            <i class="fas fa-school mt-1 mr-3 text-orange-500"></i>
+                            <span class="font-bold">Trường Phổ thông Hermann Gmeiner Đà Nẵng</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>15 Nguyễn Đình Chiểu, Phường Khuê Mỹ, Quận Ngũ Hành Sơn, TP. Đà Nẵng</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe mr-3 text-orange-500"></i>
+                            <a href="https://hermanndanang.edu.vn" target="_blank" class="hover:text-orange-400 transition" style="color: white;">Website Hermann Gmeiner</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-500"></i>
+                            <a href="mailto:hgs.danang@sosvietnam.org" class="hover:text-orange-400 transition" style="color: white;">hgs.danang@sosvietnam.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>0236.3847093 - 0236.3954340 - 0236.3951308</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Cột 3 -->
+                <div class="flex flex-col">
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Kết nối</h3>
+                    <ul class="space-y-2 text-sm mb-4" style="color: #d1d5db;">
+                        <li><a href="#" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
+                        <li><a href="https://sosvietnam.org" target="_blank" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fas fa-globe mr-2"></i> SOS Việt Nam</a></li>
+                        <li><a href="https://maps.app.goo.gl/FQhxcKbCot5qgYPA9" target="_blank" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fas fa-map mr-2"></i> Google Maps</a></li>
+                    </ul>
+                    <div class="h-56 bg-gray-700 rounded-lg overflow-hidden border border-gray-600">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.646522307134!2d108.24293131485794!3d16.03242398890353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217646636735d%3A0x627376c669350035!2zVHLGsOG7nW5nIFBo4buVIHRow7RuZGUgSGVybWFubiBHbWVpbmVyIMSQ4bqxbmc!5e0!3m2!1svi!2s!4v1716954321000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Hermann Gmeiner Đà Nẵng.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHATBOT -->
+    <div id="chatbot-container">
+        <div id="chatbot-window">
+            <div class="chat-header">
+                <div class="flex items-center">
+                    <i class="fas fa-robot mr-2"></i>
+                    <span class="font-bold">Trợ Lý Hermann AI ✨</span>
+                </div>
+                <button id="close-chat" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    Xin chào! Tôi là trợ lý ảo của trường Hermann Gmeiner Đà Nẵng. Tôi có thể giúp gì cho bạn hôm nay?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

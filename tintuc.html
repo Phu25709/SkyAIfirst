@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức - Trường Hermann Gmeiner Đà Nẵng</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="shadow-md sticky top-0 z-50 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="navigateTo('index')">
+                    <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">H</div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-orange-700 leading-none font-special" style="color: var(--color-primary);">Hermann Gmeiner</h1>
+                        <span class="text-xs text-gray-500 tracking-wider">ĐÀ NẴNG</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <nav class="flex space-x-6">
+                        <a href="index.html" class="nav-link px-2 py-2 text-md font-medium" data-target="index">Trang chủ</a>
+                        <a href="gioithieu.html" class="nav-link px-2 py-2 text-md font-medium" data-target="gioithieu">Giới thiệu</a>
+                        <a href="hoctap.html" class="nav-link px-2 py-2 text-md font-medium" data-target="hoctap">Học tập</a>
+                        <a href="tintuc.html" class="nav-link active px-2 py-2 text-md font-medium" data-target="tintuc">Tin tức</a>
+                        <a href="thuvien.html" class="nav-link px-2 py-2 text-md font-medium" data-target="thuvien">Thư viện</a>
+                        <a href="lienhe.html" class="nav-link px-2 py-2 text-md font-medium" data-target="lienhe">Liên hệ</a>
+                    </nav>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button type="button" id="theme-toggle-desktop" class="theme-toggle-btn" onclick="toggleDarkMode()" title="Chuyển chế độ Sáng/Tối">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button type="button" id="theme-toggle-mobile" class="theme-toggle-btn w-8 h-8 text-sm" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button type="button" id="mobile-menu-btn" class="text-gray-700 hover:text-orange-600 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-2xl" style="color: var(--text-muted)"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden border-t border-gray-100 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Trang chủ</a>
+                <a href="gioithieu.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Giới thiệu</a>
+                <a href="hoctap.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Học tập</a>
+                <a href="tintuc.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Tin tức</a>
+                <a href="thuvien.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Thư viện</a>
+                <a href="lienhe.html" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50">Liên hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        <!-- TINTUC -->
+        <section id="tintuc">
+            <div class="bg-gray-100 py-12 transition-colors duration-300">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold">Tin Tức & Sự Kiện</h2>
+                    <div class="w-24 h-1 bg-orange-500 mx-auto mt-4"></div>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tin 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc1.jpg" alt="Lễ Khai Giảng 2025-2026" class="w-full h-50 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs font-bold uppercase tracking-wide mb-2" style="color: var(--color-primary);">Hoạt động</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Lễ Khai Giảng 2025-2026</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Sáng ngày 05/9/2025, sân trường Phổ thông Hermann Gmeiner rực rỡ cờ hoa, rộn ràng tiếng cười nói của Thầy, Cô và học sinh trong Lễ Khai giảng năm học 2025-2026. Không khí hân hoan đã mở ra một hành trình mới, tràn đầy niềm tin và khát vọng.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">05/09/2025</span>
+                              <a href="https://www.facebook.com/share/p/1ALxVxpb3W/" data-url="https://www.facebook.com/share/p/1ALxVxpb3W/" data-title="Lễ Khai Giảng 2025-2026" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tin 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc2.jpg" alt="VUI HỘI TRĂNG RẰM 2025" class="w-full h-51 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-green-600 font-bold uppercase tracking-wide mb-2">Hoạt động ngoại khóa</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">🎉✨ VUI HỘI TRĂNG RẰM 2025 🎉✨</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">💫 “Vui hội trăng rằm” không chỉ là dịp để các em thiếu nhi vui chơi, mà còn là cơ hội để nuôi dưỡng tinh thần đoàn kết, lòng nhân ái và niềm tự hào khi cùng lớn lên dưới mái trường Hermann Gmeiner thân yêu.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">06/10/2025</span>
+                              <a href="https://www.facebook.com/share/p/1FqnGNoX8H/" data-url="https://www.facebook.com/share/p/1FqnGNoX8H/" data-title="VUI HỘI TRĂNG RẰM 2025" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tin 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc3.jpg" alt="XÂY DỰNG TÌNH BẠN ĐẸP – NÓI KHÔNG VỚI BẠO LỰC HỌC ĐƯỜNG" class="w-full h-50 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-blue-600 font-bold uppercase tracking-wide mb-2">Diễn Đàn</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">XÂY DỰNG TÌNH BẠN ĐẸP – NÓI KHÔNG VỚI BẠO LỰC HỌC ĐƯỜNG</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Tại diễn đàn, các em đã mạnh dạn bày tỏ suy nghĩ, nêu ý kiến và tham gia các tình huống xử lý để cùng nói “KHÔNG với bạo lực học đường”, xây dựng môi trường học đường văn minh, an toàn và đầy yêu thương.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">25/10/2025</span>
+                              <a href="https://www.facebook.com/share/p/16rCdatze2/" data-url="https://www.facebook.com/share/p/16rCdatze2/" data-title="XÂY DỰNG TÌNH BẠN ĐẸP – NÓI KHÔNG VỚI BẠO LỰC HỌC ĐƯỜNG" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tin 4 (Mới) -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc4.jpg" alt="Ngày hội Giáo Viên" class="w-full h-51 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-purple-600 font-bold uppercase tracking-wide mb-2">Ngày hội Giáo Viên</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Kỷ niệm 43 năm ngày nhà giáo Việt Nam 20/11 (20/11/1982 - 20/11/2025)</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Thế là một mùa 20-11 nữa ghé thăm. Nhân dịp 43 năm kỉ niệm ngày Nhà giáo Việt Nam, trường PT Hermann Gmeiner tổ chức một mùa tri ân đầy ấm áp. Tuy không thể tổ chức ở sân trường rộng lớn nhưng trong không gian nhỏ ở hội trường, thầy cô giáo cùng các em học sinh đã tạo nên những kí ức tươi đẹp cho ngôi trường bức tường đỏ thân thương.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">21/11/2025</span>
+                              <a href="https://www.facebook.com/share/p/17YCi3MLRM/" data-url="https://www.facebook.com/share/p/17YCi3MLRM/" data-title="Kỷ niệm 43 năm ngày nhà giáo Việt Nam" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tin 5 (Mới) -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc5.jpg" alt="Đấu trường AI" class="w-full h-51 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-orange-600 font-bold uppercase tracking-wide mb-2">Đấu trường AI</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">CHÚC MỪNG 4/5 ĐỘI DỰ THI CỦA HỌC SINH TRƯỜNG PT HERMANN GMEINER LỌT VÀO CHUNG KẾT CUỘC THI ĐẤU TRƯỜNG AI - AI FIRST 2025.</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Thầy cô gửi lời chúc mừng đến các em - những ngọn lửa trẻ đang thắp sáng niềm tự hào Hermann Gmeiner. Thành tích hôm nay là quả ngọt của hành trình miệt mài và cũng là dấu ấn cho sự đổi mới sáng tạo mà nhà trường luôn nỗ lực vun đắp🔥.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">23/11/2025</span>
+                              <a href="https://www.facebook.com/share/p/1T6HXd15zw/" data-url="https://www.facebook.com/share/p/1T6HXd15zw/" data-title="CHÚC MỪNG 4/5 ĐỘI DỰ THI CỦA HỌC SINH TRƯỜNG PT HERMANN GMEINER" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tin 6 (Mới) -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover flex flex-col h-full">
+                        <img src="images/tintuc6.jpg" alt="CUỘC THI KHOA HỌC KỸ THUẬT CẤP TRƯỜNG – SÂN CHƠI SÁNG TẠO CỦA NHỮNG NHÀ KHOA HỌC TRẺ" class="w-full h-51 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-red-600 font-bold uppercase tracking-wide mb-2">CUỘC THI KHKT CẤP TRƯỜNG</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">CUỘC THI KHOA HỌC KỸ THUẬT CẤP TRƯỜNG – SÂN CHƠI SÁNG TẠO CỦA NHỮNG NHÀ KHOA HỌC TRẺ</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Năm học này, Với 11 sản phẩm dự thi ở nhiều các lĩnh vực, các em học sinh tham gia đều cho thấy rõ sự đầu tư nghiêm túc, các sản phẩm đều được các thầy cô ban giám khảo đánh giá cao, trong đó đã lựa chọn được 2 đề tài, sản phẩm xuất sắc nhất để tham gia cuộc thi Khoa học Kỹ thuật cấp thành phố trong thời gian tới.</p>
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs text-gray-400">28/11/2025</span>
+                              <a href="https://www.facebook.com/share/p/17jEUjzGBY/" data-url="https://www.facebook.com/share/p/17jEUjzGBY/" data-title="CUỘC THI KHOA HỌC KỸ THUẬT CẤP TRƯỜNG" class="font-semibold text-sm hover:underline" style="color: var(--color-primary);">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 transition-colors duration-300" style="background-color: #1f2937; border-top: 1px solid var(--border-color);">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cột 1 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Thông tin về Trường</h3>
+                    <p class="mb-4 text-sm leading-relaxed" style="color: #d1d5db;">
+                        Trường Hermann Gmeiner Đà Nẵng là một phần của tổ chức SOS Việt Nam, mang đến cơ hội giáo dục và phát triển toàn diện cho trẻ em.
+                    </p>
+                </div>
+                <!-- Cột 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Liên hệ</h3>
+                    <ul class="space-y-3 text-sm" style="color: white;">
+                        <li class="flex items-start">
+                            <i class="fas fa-school mt-1 mr-3 text-orange-500"></i>
+                            <span class="font-bold">Trường Phổ thông Hermann Gmeiner Đà Nẵng</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>15 Nguyễn Đình Chiểu, Phường Khuê Mỹ, Quận Ngũ Hành Sơn, TP. Đà Nẵng</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe mr-3 text-orange-500"></i>
+                            <a href="https://hermanndanang.edu.vn" target="_blank" class="hover:text-orange-400 transition" style="color: white;">Website Hermann Gmeiner</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-500"></i>
+                            <a href="mailto:hgs.danang@sosvietnam.org" class="hover:text-orange-400 transition" style="color: white;">hgs.danang@sosvietnam.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>0236.3847093 - 0236.3954340 - 0236.3951308</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Cột 3 -->
+                <div class="flex flex-col">
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-wider" style="color: white;">Kết nối</h3>
+                    <ul class="space-y-2 text-sm mb-4" style="color: #d1d5db;">
+                        <li><a href="#" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
+                        <li><a href="https://sosvietnam.org" target="_blank" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fas fa-globe mr-2"></i> SOS Việt Nam</a></li>
+                        <li><a href="https://maps.app.goo.gl/FQhxcKbCot5qgYPA9" target="_blank" class="hover:text-orange-400 transition flex items-center" style="color: #d1d5db;"><i class="fas fa-map mr-2"></i> Google Maps</a></li>
+                    </ul>
+                    <div class="h-56 bg-gray-700 rounded-lg overflow-hidden border border-gray-600">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.646522307134!2d108.24293131485794!3d16.03242398890353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217646636735d%3A0x627376c669350035!2zVHLGsOG7nW5nIFBo4buVIHRow7RuZGUgSGVybWFubiBHbWVpbmVyIMSQ4bqxbmc!5e0!3m2!1svi!2s!4v1716954321000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Hermann Gmeiner Đà Nẵng.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHATBOT -->
+    <div id="chatbot-container">
+        <div id="chatbot-window">
+            <div class="chat-header">
+                <div class="flex items-center">
+                    <i class="fas fa-robot mr-2"></i>
+                    <span class="font-bold">Trợ Lý Hermann AI ✨</span>
+                </div>
+                <button id="close-chat" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    Xin chào! Tôi là trợ lý ảo của trường Hermann Gmeiner Đà Nẵng. Tôi có thể giúp gì cho bạn hôm nay?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+                <button id="send-btn" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

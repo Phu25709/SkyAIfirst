@@ -1,0 +1,278 @@
+:root {
+    /* --- LIGHT MODE VARIABLES --- */
+    --color-primary: #D97706;       /* Cam đất */
+    --color-primary-hover: #B45309;
+    
+    /* MÀU NỀN CHỦ ĐẠO: Màu da đậm (AntiqueWhite tối hơn chút) */
+    --bg-body: #e6d2b5; 
+    
+    --bg-surface: #ffffff; 
+    --bg-surface-alt: #fdf5e6; 
+    
+    /* Các section dùng màu trong suốt để lộ nền da */
+    --bg-section-orange: transparent;
+    --bg-section-blue: transparent;
+    --bg-section-yellow: transparent;
+    
+    --text-main: #111827; 
+    --text-muted: #374151; 
+    --text-light: #4b5563;
+
+    --font-main: 'Be Vietnam Pro', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+    
+    --border-color: #f3f4f6;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* --- DARK MODE VARIABLES --- */
+body.dark-mode {
+    --color-primary: #fbbf24;
+    
+    --bg-body: #18181b; 
+    --bg-surface: #27272a; 
+    --bg-surface-alt: #3f3f46; 
+    
+    --bg-section-orange: transparent;
+    --bg-section-blue: transparent;
+    --bg-section-yellow: transparent;
+    
+    --text-main: #ffffff;
+    --text-muted: #e4e4e7;
+    --text-light: #d4d4d8;
+    
+    --border-color: #3f3f46;
+    --shadow-color: rgba(0,0,0,0.5);
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-muted);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 { 
+    font-family: var(--font-main); 
+    color: var(--text-main); 
+}
+
+.font-special {
+    font-family: var(--font-accent) !important;
+}
+
+/* --- HERO SECTION COLORS (Đã Fix) --- */
+/* Ép tất cả các class cũ về màu da nền */
+.bg-hero-yellow, 
+.bg-skin-theme,
+.bg-white { 
+    background-color: var(--bg-body) !important; 
+} 
+
+/* Dark Mode: Chuyển về màu tối */
+body.dark-mode .bg-hero-yellow,
+body.dark-mode .bg-skin-theme,
+body.dark-mode .bg-white { 
+    background-color: #1c1917 !important; 
+}
+
+/* Lưu ý: .bg-white cho header và card cần được định nghĩa lại bên dưới để không bị ghi đè */
+
+/* --- DARK MODE OVERRIDES & COMPONENT FIXES --- */
+/* Header và Card vẫn cần màu nền riêng (Trắng/Xám tối) */
+header, 
+.card-hover, 
+.bg-white:not(.relative) { /* Loại trừ .relative thường dùng cho hero */
+    background-color: var(--bg-surface) !important;
+}
+
+body.dark-mode header,
+body.dark-mode .card-hover,
+body.dark-mode .bg-white:not(.relative) {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .bg-orange-50 { background-color: var(--bg-section-orange); }
+body.dark-mode .bg-blue-50 { background-color: var(--bg-section-blue); }
+body.dark-mode .bg-yellow-50 { background-color: var(--bg-section-yellow); }
+body.dark-mode .bg-gray-100 { background-color: var(--bg-surface-alt); }
+
+body.dark-mode .bg-gray-200, 
+body.dark-mode .bg-gray-300 { 
+    background-color: #52525b; 
+    color: var(--text-muted); 
+}
+
+/* Fix text colors in Dark Mode */
+body.dark-mode .text-gray-900,
+body.dark-mode .text-gray-800 { color: var(--text-main) !important; }
+
+body.dark-mode .text-gray-700, 
+body.dark-mode .text-gray-600,
+body.dark-mode .text-gray-500 { color: var(--text-muted) !important; }
+
+/* --- COMPONENT STYLES --- */
+.nav-link { 
+    position: relative; 
+    transition: color 0.3s ease; 
+    color: var(--text-muted);
+    font-family: var(--font-main);
+    background: none; border: none; cursor: pointer;
+}
+body.dark-mode .nav-link { color: var(--text-muted); }
+body.dark-mode .nav-link:hover { color: var(--color-primary); }
+
+.nav-link::after {
+    content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
+    background-color: var(--color-primary); transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--color-primary) !important; font-weight: 700; }
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.3s ease;
+}
+.theme-toggle-btn:hover { background: var(--color-primary); color: white; }
+body.dark-mode .theme-toggle-btn:hover { color: #18181b; }
+
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--shadow-color); }
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white; padding: 0.75rem 1.5rem; border-radius: 9999px;
+    transition: all 0.3s ease; font-weight: 600; font-family: var(--font-main);
+}
+.btn-primary:hover { background-color: var(--color-primary-hover); transform: scale(1.05); }
+body.dark-mode .btn-primary { color: #18181b; }
+
+/* Page Transitions */
+.page-section { display: none; animation: fadeIn 0.5s ease-in-out; }
+.page-section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile Menu */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0; opacity: 0; overflow: hidden;
+    background-color: var(--bg-surface);
+}
+#mobile-menu.open { max-height: 400px; opacity: 1; }
+body.dark-mode #mobile-menu { border-top: 1px solid var(--border-color); }
+body.dark-mode .mobile-link { color: var(--text-muted); }
+body.dark-mode .mobile-link:hover { background-color: var(--bg-surface-alt); color: var(--color-primary); }
+
+/* --- FIXES FOR CONTACT & FOOTER (Tự động màu trắng) --- */
+#lienhe .bg-orange-600 h2,
+#lienhe .bg-orange-600 p,
+#lienhe .bg-orange-600 span,
+#lienhe .bg-orange-600 i {
+    color: white !important;
+}
+
+footer h3 { color: white !important; }
+footer p, footer ul li, footer ul li a, footer ul li i { color: white !important; }
+footer ul li a:hover { color: var(--color-primary) !important; }
+
+/* --- CHATBOT STYLES --- */
+#chatbot-container {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    display: flex; flex-direction: column; align-items: flex-end;
+    pointer-events: none; width: max-content;
+}
+
+#chatbot-toggle {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, #D97706, #F59E0B);
+    color: white; border: none;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 24px; transition: transform 0.3s; pointer-events: auto;
+}
+#chatbot-toggle:hover { transform: scale(1.1); }
+
+#chatbot-window {
+    width: 350px; height: 500px;
+    background-color: var(--bg-surface);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    display: flex; flex-direction: column;
+    margin-bottom: 20px; overflow: hidden;
+    transform-origin: bottom right;
+    transition: all 0.3s; opacity: 0; transform: scale(0);
+    pointer-events: none; border: 1px solid var(--border-color);
+}
+#chatbot-window.open { opacity: 1; transform: scale(1); pointer-events: auto; }
+
+.chat-header {
+    background: linear-gradient(135deg, #D97706, #B45309);
+    color: white; padding: 15px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.chat-messages {
+    flex-grow: 1; padding: 15px; overflow-y: auto;
+    background-color: var(--bg-surface-alt);
+    display: flex; flex-direction: column; gap: 10px;
+}
+
+.message { max-width: 80%; padding: 10px 15px; border-radius: 15px; font-size: 14px; line-height: 1.5; word-wrap: break-word; }
+.message.bot {
+    background-color: var(--bg-surface); color: var(--text-main);
+    align-self: flex-start; border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid var(--border-color);
+}
+.message.user {
+    background-color: var(--color-primary); color: white;
+    align-self: flex-end; border-bottom-right-radius: 2px;
+    box-shadow: 0 2px 5px rgba(217, 119, 6, 0.3);
+}
+body.dark-mode .message.user { color: #18181b; }
+
+.chat-input-area {
+    padding: 15px; background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    display: flex; gap: 10px;
+}
+
+#chat-input {
+    flex-grow: 1; padding: 10px 15px; border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-surface-alt); color: var(--text-main);
+    outline: none; transition: border-color 0.2s;
+}
+#chat-input:focus { border-color: var(--color-primary); }
+
+#send-btn {
+    background-color: var(--color-primary); color: white;
+    border: none; width: 40px; height: 40px; border-radius: 50%;
+    cursor: pointer; transition: background-color 0.2s;
+    display: flex; align-items: center; justify-content: center;
+}
+body.dark-mode #send-btn { color: #18181b; }
+#send-btn:hover { background-color: var(--color-primary-hover); }
+
+/* Loading Dots */
+.typing-indicator span {
+    display: inline-block; width: 6px; height: 6px;
+    background-color: #aaa; border-radius: 50%;
+    animation: typing 1s infinite; margin: 0 2px;
+}
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+/* Chat Markdown */
+.message.bot p { margin-bottom: 0.5em; }
+.message.bot p:last-child { margin-bottom: 0; }
+.message.bot ul { list-style-type: disc; margin-left: 1.5em; }
+.message.bot strong { font-weight: 700; color: var(--color-primary); }
